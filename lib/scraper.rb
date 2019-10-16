@@ -47,14 +47,14 @@ class Scraper
         end,
       :github => 
         begin 
-          socials[2-skips]["href"]
+          socials[2 - skips]["href"]
         rescue NoMethodError
           skips += 1
           nil
         end,
       :blog => 
         begin 
-          socials[3-skips]["href"]
+          socials[3 - skips]["href"]
         rescue NoMethodError
           skips += 1
           nil
