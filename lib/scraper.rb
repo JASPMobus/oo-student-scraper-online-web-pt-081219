@@ -33,7 +33,7 @@ class Scraper
       :linkedin => socials[1]["href"], 
       :github => socials[2]["href"], 
       :blog => socials[3]["href"], 
-      :profile_quote => nil, 
+      :profile_quote => quote.text, 
       :bio => nil
     }
   end 
