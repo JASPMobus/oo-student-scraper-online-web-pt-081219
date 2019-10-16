@@ -13,8 +13,8 @@ class Scraper
     
     students.each do |student|
       student_hash = {
-        :name => student["div.card-text-container h4"],
-        :location => student["div.card-text-container p"]
+        :name => student["div.card-text-container h4"].text,
+        :location => student["div.card-text-container p"].text
       }
       
       ret_array.push(student_hash)
