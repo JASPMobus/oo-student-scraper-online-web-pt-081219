@@ -29,14 +29,18 @@ class Scraper
     
     socials = socials.map { |social| social["href"] }
     
+    twitter = socials.find { |social| social.include?("twitter") }
+    socials = socials.delete(twitter)
+    linkedin = socials.find { |social| social.include?("linkedin") }
+    
     quote = Nokogiri::HTML(open(profile_url)).css("div.profile-quote")
     bio = Nokogiri::HTML(open(profile_url)).css("div.description-holder p")
     
     {
-      :twitter => socials.find { |social| social.include?("twitter") },
+      :twitter => ,
       :linkedin => socials.find { |social| social.include?("linkedin") },
       :github => socials.find { |social| social.include?("github") },
-      :blog => socials.find { |social| social.include?("youtube") },
+      :blog => socials.delete,
       :profile_quote => quote.text, 
       :bio => bio.text
     }
