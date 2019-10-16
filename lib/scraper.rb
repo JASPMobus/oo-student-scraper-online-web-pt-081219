@@ -47,7 +47,8 @@ class Scraper
       github = socials.find { |social| social.include?("github") }
       socials = socials.delete(github)
     else
-      github = nil
+      github = nil 
+    end
 
     if socials
     blog = socials.first
