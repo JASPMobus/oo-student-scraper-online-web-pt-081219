@@ -35,6 +35,7 @@ class Scraper
         begin 
           socials[0]["href"]
         rescue NoMethodError
+          skips += 1
           nil
         end,
       :linkedin => 
