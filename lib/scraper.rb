@@ -15,6 +15,7 @@ class Scraper
       student_hash = {
         :name => student["div.card-text-container h4"].text,
         :location => student["div.card-text-container p"].text
+        :profile_url => student["href"]
       }
       
       ret_array.push(student_hash)
