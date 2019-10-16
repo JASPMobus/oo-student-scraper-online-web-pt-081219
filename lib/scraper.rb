@@ -28,9 +28,9 @@ class Scraper
     info = Nokogiri::Slop(open(profile_url))
     {
       :twitter => info.html.body.div.div[1].a[0]["href"], 
-      :linkedin => info.html.body.div.div[1].a[0]["href"], 
-      :github => info.html.body.div.div[1].a[0]["href"], 
-      :blog => info.html.body.div.div[1].a[0]["href"], 
+      :linkedin => info.html.body.div.div[1].a[1]["href"], 
+      :github => info.html.body.div.div[1].a[2]["href"], 
+      :blog => info.html.body.div.div[1].a[3]["href"], 
       :profile_quote => nil, 
       :bio => nil
     }
