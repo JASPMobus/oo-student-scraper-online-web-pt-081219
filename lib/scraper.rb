@@ -31,16 +31,10 @@ class Scraper
     
     {
       skips = 0
-      :twitter => 
-        begin 
-          socials[0]["href"]
-        rescue NoMethodError
-          skips += 1
-          nil
-        end,
-      :linkedin => socials[1 - skips]["href"]
-      :github => socials[2 - skips]["href"]
-      :blog => socials[3 - skips]["href"]
+      :twitter => socials[0]["href"],
+      :linkedin => socials[1 - skips]["href"],
+      :github => socials[2 - skips]["href"],
+      :blog => socials[3 - skips]["href"],
       :profile_quote => quote.text, 
       :bio => bio.text
     }
