@@ -32,7 +32,7 @@ class Scraper
       :github => nil, 
       :blog => nil, 
       :profile_quote => nil, 
-      :bio => nil, 
+      :bio => nil
     }
   end 
 
