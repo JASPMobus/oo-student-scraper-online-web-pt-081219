@@ -30,6 +30,7 @@ class Scraper
     bio = Nokogiri::HTML(open(profile_url)).css("div.description-holder p")
     
     {
+      skips = 0
       :twitter => 
         begin 
           socials[0]["href"]
