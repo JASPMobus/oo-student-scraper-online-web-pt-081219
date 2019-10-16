@@ -34,9 +34,9 @@ class Scraper
     
     {
       :twitter => socials.find { |social| social.include?("twitter") },
-      :linkedin => socials[1]["href"],
-      :github => socials[2]["href"],
-      :blog => socials[3]["href"],
+      :linkedin => socials.find { |social| social.include?("twitter") },
+      :github => socials.find { |social| social.include?("twitter") },
+      :blog => socials.find { |social| social.include?("twitter") },
       :profile_quote => quote.text, 
       :bio => bio.text
     }
