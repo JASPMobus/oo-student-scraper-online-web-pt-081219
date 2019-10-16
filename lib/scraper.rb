@@ -49,12 +49,14 @@ class Scraper
         begin 
           socials[2]["href"]
         rescue NoMethodError
+          skips += 1
           nil
         end,
       :blog => 
         begin 
           socials[3]["href"]
         rescue NoMethodError
+          skips += 1
           nil
         end,
       :profile_quote => quote.text, 
