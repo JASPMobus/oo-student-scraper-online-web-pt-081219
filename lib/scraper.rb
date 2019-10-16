@@ -28,10 +28,10 @@ class Scraper
     socials = Nokogiri::Slop(open(profile_url)).css("div.social-icon-container a")
     
     {
-      :twitter => info.html.body.div.div[1].a[0]["href"], 
-      :linkedin => info.html.body.div.div[1].a[1]["href"], 
-      :github => info.html.body.div.div[1].a[2]["href"], 
-      :blog => info.html.body.div.div[1].a[3]["href"], 
+      :twitter => socials[0]["href"], 
+      :linkedin => socials[1]["href"], 
+      :github => socials[2]["href"], 
+      :blog => socials[3]["href"], 
       :profile_quote => nil, 
       :bio => nil
     }
