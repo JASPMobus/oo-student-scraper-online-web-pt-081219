@@ -29,8 +29,12 @@ class Scraper
     
     socials = socials.map { |social| social["href"] }
     
-    twitter = socials.find { |social| social.include?("twitter") }
-    socials = socials.delete(twitter)
+    if socials
+      twitter = socials.find { |social| social.include?("twitter") }
+      socials = socials.delete(twitter)
+    else 
+      twitter = nil
+    end
     
     linkedin = socials.find { |social| social.include?("linkedin") }
     socials = socials.delete(linkedin)
