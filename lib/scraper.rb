@@ -31,7 +31,7 @@ class Scraper
     noko_socials.each { |noko_social| socials.push(noko_social) }
     
     if socials
-      twitter = (socials.find { |social| social.text.include?("twitter") })["href"]
+      twitter = (socials.find { |social| social.include?("twitter") })["href"]
       socials = socials.delete(twitter)
     else 
       twitter = nil
