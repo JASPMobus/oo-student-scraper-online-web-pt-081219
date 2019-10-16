@@ -38,26 +38,9 @@ class Scraper
           skips += 1
           nil
         end,
-      :linkedin => 
-        begin 
-          socials[1 - skips]["href"]
-        rescue NoMethodError
-          skips += 1
-          nil
-        end,
-      :github => 
-        begin 
-          socials[2 - skips]["href"]
-        rescue NoMethodError
-          skips += 1
-          nil
-        end,
-        begin 
-          :blog => socials[3 - skips]["href"]
-        rescue NoMethodError
-          skips += 1
-          :blog => nil
-        end,
+      :linkedin => socials[1 - skips]["href"]
+      :github => socials[2 - skips]["href"]
+      :blog => socials[3 - skips]["href"]
       :profile_quote => quote.text, 
       :bio => bio.text
     }
