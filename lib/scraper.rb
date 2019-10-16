@@ -36,6 +36,7 @@ class Scraper
     github = socials.find { |social| social.include?("github") }
     socials = socials.delete(github)
     blog = socials.first
+    
     quote = Nokogiri::HTML(open(profile_url)).css("div.profile-quote")
     bio = Nokogiri::HTML(open(profile_url)).css("div.description-holder p")
     
