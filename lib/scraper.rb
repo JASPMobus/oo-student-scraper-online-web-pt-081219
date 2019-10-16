@@ -26,7 +26,12 @@ class Scraper
 
   def self.scrape_profile_page(profile_url) 
     {
-      
+      :twitter =>
+      :linkedin =>
+      :github => 
+      :blog =>
+      :profile_quote =>
+      :bio => 
     }
   end 
 
