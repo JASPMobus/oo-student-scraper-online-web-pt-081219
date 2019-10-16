@@ -22,7 +22,6 @@ class Scraper
     end  
     
     ret_array 
-      
   end 
 
   def self.scrape_profile_page(profile_url) 
