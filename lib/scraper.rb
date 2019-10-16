@@ -36,9 +36,24 @@ class Scraper
         rescue NoMethodError
           nil
         end
-      :linkedin => socials[1]["href"], 
-      :github => socials[2]["href"], 
-      :blog => socials[3]["href"], 
+      :linkedin => 
+        begin 
+          socials[1]["href"], 
+        rescue NoMethodError
+          nil
+        end
+      :github => 
+        begin 
+          socials[2]["href"], 
+        rescue NoMethodError
+          nil
+        end
+      :blog => 
+        begin 
+          socials[3]["href"], 
+        rescue NoMethodError
+          nil
+        end
       :profile_quote => quote.text, 
       :bio => bio.text
     }
