@@ -27,7 +27,7 @@ class Scraper
   def self.scrape_profile_page(profile_url) 
     socials = Nokogiri::Slop(open(profile_url)).css("div.social-icon-container a")
     
-    socials = socials.map { |social| social["href"]
+    socials = socials.map { |social| social["href"] }
     
     quote = Nokogiri::HTML(open(profile_url)).css("div.profile-quote")
     bio = Nokogiri::HTML(open(profile_url)).css("div.description-holder p")
