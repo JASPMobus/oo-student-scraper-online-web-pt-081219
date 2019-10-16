@@ -16,18 +16,18 @@ class Scraper
         :name => student.div.card-text-container.h4.text,
         :location => student.div.card-text-container.p.text,
         :profile_url => student["href"]
-      }
+      } 
       
-      ret_array.push(student_hash)
-    end 
+      ret_array.push(student_hash) 
+    end  
     
-    ret_array
+    ret_array 
       
-  end
+  end 
 
-  def self.scrape_profile_page(profile_url)
+  def self.scrape_profile_page(profile_url) 
     
-  end
+  end 
 
-end
+end 
 
