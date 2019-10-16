@@ -41,10 +41,10 @@ class Scraper
     bio = Nokogiri::HTML(open(profile_url)).css("div.description-holder p")
     
     {
-      :twitter => ,
-      :linkedin => socials.find { |social| social.include?("linkedin") },
+      :twitter => twitter,,
+      :linkedin => linkedin,
       :github => socials.find { |social| social.include?("github") },
-      :blog => socials.delete,
+      :blog => blog,
       :profile_quote => quote.text, 
       :bio => bio.text
     }
