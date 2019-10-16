@@ -51,7 +51,10 @@ class Scraper
     end
 
     if socials
-    blog = socials.first
+      blog = socials.first
+    else
+      blog = nil 
+    end
     
     quote = Nokogiri::HTML(open(profile_url)).css("div.profile-quote")
     bio = Nokogiri::HTML(open(profile_url)).css("div.description-holder p")
