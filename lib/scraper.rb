@@ -31,9 +31,9 @@ class Scraper
     
     {
       :twitter => socials[0]["href"],
-      :linkedin => socials[1 - skips]["href"],
-      :github => socials[2 - skips]["href"],
-      :blog => socials[3 - skips]["href"],
+      :linkedin => socials[1]["href"],
+      :github => socials[2]["href"],
+      :blog => socials[3]["href"],
       :profile_quote => quote.text, 
       :bio => bio.text
     }
