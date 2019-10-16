@@ -27,8 +27,6 @@ class Scraper
   def self.scrape_profile_page(profile_url) 
     socials = Nokogiri::HTML(open(profile_url)).css("div.social-icon-container a")
     
-    socials = socials.map { |social| social["href"] }
-    
     if socials
       twitter = socials.find { |social| social.include?("twitter") }
       socials = socials.delete(twitter)
