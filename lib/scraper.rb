@@ -43,7 +43,7 @@ class Scraper
     {
       :twitter => twitter,
       :linkedin => linkedin,
-      :github => socials.find { |social| social.include?("github") },
+      :github => github,
       :blog => blog,
       :profile_quote => quote.text, 
       :bio => bio.text
