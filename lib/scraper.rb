@@ -35,13 +35,19 @@ class Scraper
     else 
       twitter = nil
     end
-    
-    linkedin = socials.find { |social| social.include?("linkedin") }
-    socials = socials.delete(linkedin)
-    
-    github = socials.find { |social| social.include?("github") }
-    socials = socials.delete(github)
-    
+
+    if socials
+      linkedin = socials.find { |social| social.include?("linkedin") }
+      socials = socials.delete(linkedin)
+    else
+      linkedin = nil
+    end
+
+    if socials
+      github = socials.find { |social| social.include?("github") }
+      socials = socials.delete(github)
+
+    if socials
     blog = socials.first
     
     quote = Nokogiri::HTML(open(profile_url)).css("div.profile-quote")
