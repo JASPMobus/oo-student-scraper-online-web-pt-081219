@@ -26,7 +26,7 @@ class Scraper
 
   def self.scrape_profile_page(profile_url) 
     socials = Nokogiri::Slop(open(profile_url)).css("div.social-icon-container a")
-    quote = Nokogiri::HTML(open(profile_url)).css("")
+    quote = Nokogiri::HTML(open(profile_url)).css("div.profile_quote")
     
     {
       :twitter => socials[0]["href"], 
