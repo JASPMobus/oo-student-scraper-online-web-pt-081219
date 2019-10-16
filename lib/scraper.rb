@@ -1,3 +1,5 @@
+gem 'nokogiri'
+
 require 'open-uri'
 require 'pry'
 
