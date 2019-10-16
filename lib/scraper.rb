@@ -31,10 +31,13 @@ class Scraper
     
     twitter = socials.find { |social| social.include?("twitter") }
     socials = socials.delete(twitter)
+    
     linkedin = socials.find { |social| social.include?("linkedin") }
     socials = socials.delete(linkedin)
+    
     github = socials.find { |social| social.include?("github") }
     socials = socials.delete(github)
+    
     blog = socials.first
     
     quote = Nokogiri::HTML(open(profile_url)).css("div.profile-quote")
