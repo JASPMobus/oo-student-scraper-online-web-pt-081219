@@ -27,7 +27,8 @@ class Scraper
   def self.scrape_profile_page(profile_url) 
     noko_socials = Nokogiri::HTML(open(profile_url)).css("div.social-icon-container a")
     
-    social
+    socials = []
+    noko_socials.each do { |noko_social| socials.push(noko_social) }
     
     if socials
       twitter = socials.find { |social| social.include?("twitter") }
