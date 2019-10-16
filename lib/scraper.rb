@@ -27,7 +27,7 @@ class Scraper
   def self.scrape_profile_page(profile_url) 
     info = Nokogiri::Slop(open(index_url)).css("div")
     {
-      :twitter => info.
+      :twitter => info[0]
       :linkedin =>
       :github => 
       :blog =>
