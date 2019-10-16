@@ -25,7 +25,7 @@ class Scraper
   end 
 
   def self.scrape_profile_page(profile_url) 
-    
+    ret_hash = {}
   end 
 
 end 
