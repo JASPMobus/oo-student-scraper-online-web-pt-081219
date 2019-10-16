@@ -15,6 +15,8 @@ class Scraper
       student_hash = {
         :name = student.text
       }
+      
+      ret_array.push(student_hash)
     end 
     
     ret_array
