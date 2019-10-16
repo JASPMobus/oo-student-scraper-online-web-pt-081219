@@ -31,7 +31,8 @@ class Scraper
     
     {
       :twitter => 
-        begin socials[0]["href"], 
+        begin 
+          socials[0]["href"], 
         rescue NoMethodError
           nil
         end
