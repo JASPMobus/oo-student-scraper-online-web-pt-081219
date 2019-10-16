@@ -54,7 +54,7 @@ class Scraper
         end,
       :blog => 
         begin 
-          socials[3]["href"]
+          socials[3-skips]["href"]
         rescue NoMethodError
           skips += 1
           nil
